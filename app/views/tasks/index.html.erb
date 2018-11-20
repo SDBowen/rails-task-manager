@@ -5,3 +5,6 @@
     <input type='checkbox'> <%= link_to(task['title'], task_path(task['id'])) %>
   </div>
 <% end %>
+
+<%# Add new task link %>
+<%= link_to('Add a new task', new_path) %>

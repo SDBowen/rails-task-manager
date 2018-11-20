@@ -1,4 +1,4 @@
-<%# Taks title %>
+<%# Task title %>
 <h1><%= @task['title'] %></h1>
 
 <%# Task details %>
@@ -10,5 +10,5 @@
     <label for="complete">This task is <%= @task['completed'] ? '' : 'not ' %>complete</label>
 </div>
 
-<%# Return link %>
-<%= link_to('Back to list', '/tasks') %>
+<%# Return to index %>
+<%= link_to('Back to list', tasks_path) %>
