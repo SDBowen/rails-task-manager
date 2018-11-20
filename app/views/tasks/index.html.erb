@@ -1,9 +1,11 @@
 <h1>My tasks</h1>
   
+<%# Display all task %>
 <% @tasks.each do |task| %>
   <div class='task-item'>
     <input type='checkbox'> <%= link_to(task['title'], task_path(task['id'])) %> -
     <span class="task-delete">
+    <%# Delete with confirmation popup %>
       <%= link_to('X', task_path(task['id']), method: :delete, data: {confirm: "Delete #{task['title']}?"}) %>
     </span>
   </div>
