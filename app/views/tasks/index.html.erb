@@ -2,6 +2,6 @@
   
 <% @tasks.each do |task| %>
   <div class='task-item'>
-    <input type='checkbox'> <a href="#"> <%= task['title']%> </a>
+    <input type='checkbox'> <%= link_to(task['title'], task_path(task['id'])) %>
   </div>
 <% end %>

@@ -1,0 +1,14 @@
+<%# Taks title %>
+<h1><%= @task['title'] %></h1>
+
+<%# Task details %>
+<p><%= @task['details'] %></p>
+
+<%# Task completed checkbox %>
+<div class='task-complete'>
+    <input type='checkbox' id='complete' <%= @task['completed'] ? 'checked' : '' %> >
+    <label for="complete">This task is <%= @task['completed'] ? '' : 'not ' %>complete</label>
+</div>
+
+<%# Return link %>
+<%= link_to('Back to list', '/tasks') %>
