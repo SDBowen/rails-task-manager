@@ -1,6 +1,11 @@
 <%# Task title %>
 <h1><%= @task['title'] %></h1>
 
+<%# Edit task %>
+<div class="edit-item">
+    <%= link_to('Edit this task', edit_path(@task['id'])) %>
+</div>
+
 <%# Task details %>
 <p><%= @task['details'] %></p>
 
